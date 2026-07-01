@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GoAttend | Registration</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="registration.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="navbar-inner">
+    <div class="logo">
+      <span class="logo-mark">G</span>
+      GoAttend
+    </div>
+    <h2>Registration</h2>
+  </div>
+</header>
+
+<main class="page-wrap">
+
+  <section class="form-section">
+    <h3>Create a new account</h3>
+    <p class="sub-text">Fill in the details below. All fields are required.</p>
+
+    <form id="reg-form">
+
+      <div class="form-row">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" placeholder="e.g. Ananya Rao">
+        <span class="error-msg" id="err-fullname"></span>
+      </div>
+
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="e.g. ananya@campus.edu">
+        <span class="error-msg" id="err-email"></span>
+      </div>
+
+      <div class="form-row">
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" placeholder="10 digit phone number">
+        <span class="error-msg" id="err-phone"></span>
+      </div>
+
+      <div class="form-row">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="At least 6 characters">
+        <span class="error-msg" id="err-password"></span>
+      </div>
+
+      <div class="form-row">
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob">
+        <span class="error-msg" id="err-dob"></span>
+      </div>
+
+      <div class="form-row">
+        <label for="role">Role</label>
+        <select id="role">
+          <option value="">Select a role</option>
+          <option value="Student">Student</option>
+          <option value="Faculty">Faculty</option>
+          <option value="Administrator">Administrator</option>
+        </select>
+        <span class="error-msg" id="err-role"></span>
+      </div>
+
+      <div class="form-row">
+        <label for="profilepic">Profile Picture</label>
+        <input type="file" id="profilepic" accept="image/*">
+        <span class="error-msg" id="err-profilepic"></span>
+      </div>
+
+      <button type="button" id="submit-btn" class="btn-submit">Register</button>
+
+    </form>
+  </section>
+
+  <section class="card-section">
+    <div class="card-section-header">
+    <h3>Registered Details</h3>
+    <button type="button" id="clear-btn" class="btn-clear">Clear All</button>
+    </div>
+    <div id="card-container">
+      <p class="empty-msg" id="empty-msg">No details submitted yet.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>&copy; 2026 GoAttend</footer>
+
+<script src="registration.js"></script>
+</body>
+</html>
